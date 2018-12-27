@@ -2,24 +2,25 @@
 This package utilizes excel4node to generate a simple report. It attempts to streamline the process of getting data from the database to the end user. This is ported from and expanded on simpleReport.py.
 
 ## Installation
-`npm install simplereportjs`
+`npm install simplereport.js`
 
 ## Usage
 #### Demo
 There is only one function that takes one optional object. If you run it without the object it will create a demo file in the current working directory with a timestamp for the filename.
 ```
-var simpleReport = require('simplereportjs');
+var simpleReport = require('simplereport.js');
 simpleReport.generate();
 ```
 
 #### Complete Example
 Normally you will provide an object that defines your report.
 ```
-var simpleReport = require('simplereportjs');
+var simpleReport = require('simplereport.js');
 
 const report = {
   name: "My Report Name",
-  description: "Here is where you put the report description. It can be as long as you want and the row height will expand to fill the space.\\n\\n It does a pretty good job, but isn't perfect.",
+  filename: "My Report Name.xlsx",
+  description: "Here is where you put the report description. It can be as long as you want and the row height will expand to fill the space.\n\nIt does a pretty good job, but isn't perfect.",
   sheets: [{
     name: "Sheet One",
     description: "",
@@ -165,6 +166,10 @@ const report = {
     }]
   }],
 }
+
+simpleReport.generate(report)
+  .then(() => console.log('Done!'))
+  .catch((err) => console.log(err))
 ```
 
 #### Parameters
@@ -211,3 +216,4 @@ All keys are optional.
 
 ## Limitations
 - The tables are not actually formatted as Excel tables, they are just ranges (excel4node limitation). Because of this there can only be one filtered range on any given sheet (MS Excel limitation). If more than one range is specified only the last one will have filters.
+- After filters are used for the first time the blank hidden row between the data range and the totals becomes part of the range and will become unhidden if the filters are cleared.

@@ -1,6 +1,6 @@
 {
   "name": "simplereport.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "This package utilizes excel4node to generate a simple report. It attemps to streamline the process of getting data from the database to the end user. This is ported from and expanded on simpleReport.py.",
   "main": "index.js",
   "scripts": {

@@ -67,7 +67,7 @@ const generate = (report={}) => {
     report.sheets = [{
         name: 'simpleReport.js Demo',
         description: 'You\'re seeing this demo page because report.sheets ' +
-          'was not defined. To replace this with your content, try adding ' +
+          'was not defined. To replace this with your content, try adding:\n ' +
           'report.sheets = [{ name: \'Sheet Name\' }]',
         printSheetName: true,
         "tables": [{
