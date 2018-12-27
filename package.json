@@ -1,0 +1,28 @@
+{
+  "name": "simplereport.js",
+  "version": "0.1.0",
+  "description": "This package utilizes excel4node to generate a simple report. It attemps to streamline the process of getting data from the database to the end user. This is ported from and expanded on simpleReport.py.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ldsmike88/simpleReport.js.git"
+  },
+  "keywords": [
+    "simple",
+    "report",
+    "excel"
+  ],
+  "author": "Michael Cox",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ldsmike88/simpleReport.js/issues"
+  },
+  "homepage": "https://github.com/ldsmike88/simpleReport.js#readme",
+  "dependencies": {
+    "excel4node": "^1.7.0",
+    "strftime": "^0.10.0"
+  }
+}
